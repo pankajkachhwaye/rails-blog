@@ -1,0 +1,16 @@
+<div class="panel panel-danger">
+    
+    
+ <% if obj.errors.any? %>
+  <div class="panel-heading">
+    <h5><%= pluralize(obj.errors.count, "error")%></h5>
+    </div>
+   <div class="panel-body">
+    <ul>
+      <% obj.errors.full_messages.each do |msg| %>
+        <li> <%= msg %> </li>
+      <% end %>
+    </ul>  
+ </div>
+  <%end%>
+</div>
