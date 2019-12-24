@@ -1,16 +1,28 @@
 <h1>Listing of aticles</h1>
 <%= link_to "Create new Article", new_article_path %>
+   <div align="center">
+   <%= will_paginate @articles %>
+   </div>
  <table class="table table-striped">
 
   <tr>
      <th>Title    </th>
      <th>Description</th>
+     <th>Created By</th>
+     <th>Created/Updated</th>
      <th>Action</th>
   </tr>
   <% @articles.each do |article| %>
   <tr>
     <td><%= article.title %></td>
      <td><%= article.description %></td>
+     <td>
+         <%= article.user.username if article.user %>
+     </td>
+      <td>
+      Created at :<%= time_ago_in_words(article.created_at) %>
+      Updated at :<%= time_ago_in_words(article.updated_at) %>
+      </td>
      <td><%= link_to "Edit", edit_article_path(article) %>
      <%= link_to "Show", article_path(article) %>
       <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure want to delete this item"} %>
@@ -18,3 +30,6 @@
   </tr>
   <% end %>
 </table>
+<div align="center">
+   <%= will_paginate @articles %>
+   </div>

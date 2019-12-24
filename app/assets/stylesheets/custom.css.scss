@@ -46,7 +46,7 @@ footer {
   
   }
   .content {
-  height: 550px;
+  min-height: 550px;
     
   }
   .article-actions {
@@ -79,5 +79,12 @@ footer {
       padding-bottom: 15px;
       
       }
+      .listing {
+
+        list-style: none;
+        
+        padding-left: 0;
+        
+        }
       
       

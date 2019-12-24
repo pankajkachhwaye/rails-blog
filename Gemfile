@@ -7,6 +7,13 @@ ruby '2.6.3'
 gem 'rails', '~> 6.0.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
+# Use for hashing 
+gem 'bcrypt', '~> 3.1.7'
+#for pagination records
+gem 'will_paginate', '3.1.7'
+
+gem 'bootstrap-will_paginate', '1.0.0'
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
